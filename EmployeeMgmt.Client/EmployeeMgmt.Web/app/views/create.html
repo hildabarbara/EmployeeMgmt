@@ -1,0 +1,36 @@
+﻿<div class="col-md-4">
+
+    <h4>Cadastro de Funcionários</h4>
+    {{title}}
+
+    <label>Nome do Funcionário:</label>
+    <input type="text" class="form-control"
+           placeholder="Digite aqui" ng-model="model.Name" />
+    <br />
+
+    <label>Profissão:</label>
+    <input type="text" class="form-control"
+           placeholder="Digite aqui" ng-model="model.Occupation" />
+    <br />
+
+    <label>E-mail:</label>
+    <input type="text" class="form-control"
+           placeholder="Digite aqui" ng-model="model.Email" />
+    <br />
+
+    <label>Data de Nascimento:</label>
+    <input type="datetime" class="form-control"
+           placeholder="Digite aqui" ng-model="model.Birth" />
+    <br />
+
+    <button class="btn btn-success" ng-click="create()">
+        Cadastrar Funcionário
+    </button>
+
+    <br /><br />
+
+    <div class="text-primary">
+        {{message}}
+    </div>
+
+</div>

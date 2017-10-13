@@ -1,0 +1,7 @@
+C:\Users\Hilda Bárbara\Documents\Visual Studio 2015\Projects\EmployeeMgmt\EmployeeMgmt.Application\bin\Debug\EmployeeMgmt.Application.dll
+C:\Users\Hilda Bárbara\Documents\Visual Studio 2015\Projects\EmployeeMgmt\EmployeeMgmt.Application\bin\Debug\EmployeeMgmt.Application.pdb
+C:\Users\Hilda Bárbara\Documents\Visual Studio 2015\Projects\EmployeeMgmt\EmployeeMgmt.Application\bin\Debug\EmployeeMgmt.Domain.dll
+C:\Users\Hilda Bárbara\Documents\Visual Studio 2015\Projects\EmployeeMgmt\EmployeeMgmt.Application\bin\Debug\EmployeeMgmt.Domain.pdb
+C:\Users\Hilda Bárbara\Documents\Visual Studio 2015\Projects\EmployeeMgmt\EmployeeMgmt.Application\obj\Debug\EmployeeMgmt.Application.csprojResolveAssemblyReference.cache
+C:\Users\Hilda Bárbara\Documents\Visual Studio 2015\Projects\EmployeeMgmt\EmployeeMgmt.Application\obj\Debug\EmployeeMgmt.Application.dll
+C:\Users\Hilda Bárbara\Documents\Visual Studio 2015\Projects\EmployeeMgmt\EmployeeMgmt.Application\obj\Debug\EmployeeMgmt.Application.pdb

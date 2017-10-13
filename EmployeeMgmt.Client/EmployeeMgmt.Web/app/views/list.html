@@ -1,0 +1,103 @@
+﻿<div>
+
+    <h4>Consulta de Funcionários</h4>
+    {{title}}
+    <hr />
+
+    <div>
+        {{message}}
+    </div>
+
+    Pesquisa de Funcionários:
+    <input type="text" ng-model="search" placeholder="Digite aqui" />
+
+    <table class="table" ng-init="list()">
+        <thead>
+            <tr>
+                <th>Matrícula</th>
+                <th>Nome do Funcionário</th>
+                <th>Cargo</th>
+                <th>Email</th>
+                <th>Data de Nascimento</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr ng-repeat="e in employees | filter : search">
+                <td>{{c.EmployeeId}}</td>
+                <td>{{c.Name}}</td>
+                <td>{{c.Occupation}}</td>
+                <td>{{c.Email}}</td>
+                <td>{{c.Birth | date : 'dd/MM/yyyy'}}</td>
+                <td>
+
+                    <button class="btn btn-danger btn-sm"
+                            ng-click="delete(e.EmployeeId)">
+                        Excluir
+                    </button>
+
+                    <button class="btn btn-primary btn-sm"
+                            data-target="#janela"
+                            data-toggle="modal"
+                            ng-click="edit(e.EmployeeId)">
+                        Atualizar
+                    </button>
+
+                </td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Quantidade de Funcionários: {{(employees | filter: search).length}} </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+
+
+<!-- JANELA MODAL -->
+<div id="janela" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header btn-primary">
+                <h3>Editar dados do Funcionário</h3>
+            </div>
+            <div class="modal-body">
+
+                <label>Código do Funcionário:</label>
+                <input type="text" ng-model="model.EmployeeId"
+                       class="form-control" readonly />
+                <br />
+
+                <label>Nome do Funcionário:</label>
+                <input type="text" ng-model="model.Name"
+                       class="form-control" />
+                <br />
+
+                <label>Cargo:</label>
+                <input type="text" ng-model="model.Occupation"
+                       class="form-control" />
+                <br />
+
+                <label>Endereço de Email:</label>
+                <input type="text" ng-model="model.Email"
+                       class="form-control" />
+                <br />
+
+                <label>Data de nascimento:</label>
+                <input type="datetime" ng-model="model.Birth"
+                       class="form-control" />
+                <br />
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal"
+                        ng-click="edit()">
+                    Atualizar Dados
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

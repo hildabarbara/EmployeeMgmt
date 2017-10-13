@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+
+</head>
+<body class="container">
+
+    <h3>Projeto Controle de Funcionários</h3>
+    API de Serviços baseados em REST (WebApi)
+    <hr />
+
+    <ul>
+        <li> <strong> POST - /api/funcionario/cadastro </strong> </li>
+        <li> Descrição: Cadastrar um novo funcionário </li>
+        <li> Tipo de dados: JSON </li>
+        <li>
+            Dados de entrada:
+            <ul>
+                <li> Nome - Texto </li>
+                <li> Cargo - Texto </li>
+                <li> Email - Texto </li>
+            </ul>
+        </li>
+        <li>
+            Saída HTTP:
+            <ul>
+                <li> 200 - OK (Funcionário cadastrado com sucesso) </li>
+                <li> 403 - Erros de validação dos dados </li>
+                <li> 400 - Erro do servidor </li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+        <li> <strong> PUT - /api/funcionario/editar </strong> </li>
+        <li> Descrição: Editar dados de um funcionário </li>
+        <li> Tipo de dados: JSON </li>
+        <li>
+            Dados de entrada:
+            <ul>
+                <li> FuncionarioId - Inteiro </li>
+                <li> Nome - Texto </li>
+                <li> Cargo - Texto </li>
+                <li> Email - Texto </li>
+            </ul>
+        </li>
+        <li>
+            Saída HTTP:
+            <ul>
+                <li> 200 - OK (Funcionário atualizado com sucesso) </li>
+                <li> 403 - Erros de validação dos dados / funcionário não encontrado </li>
+                <li> 400 - Erro do servidor </li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+        <li> <strong> DELETE - /api/funcionario/excluir </strong> </li>
+        <li> Descrição: Excluir um funcionario </li>
+        <li> Tipo de dados: JSON </li>
+        <li>
+            Dados de entrada:
+            <ul>
+                <li> FuncionarioId - Inteiro </li>
+            </ul>
+        </li>
+        <li>
+            Saída HTTP:
+            <ul>
+                <li> 200 - OK (Funcionário excluido com sucesso) </li>
+                <li> 403 - Funcionário não encontrado </li>
+                <li> 400 - Erro do servidor </li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+        <li> <strong> GET - /api/funcionario/obter </strong> </li>
+        <li> Descrição: Obter dados de 1 Funcionário </li>
+        <li> Tipo de dados: JSON </li>
+        <li>
+            Dados de entrada:
+            <ul>
+                <li> FuncionarioId - Inteiro </li>
+            </ul>
+        </li>
+        <li>
+            Saída HTTP:
+            <ul>
+                <li> 200 - OK (Objeto contendo os dados do Funcionário) </li>
+                <li> 403 - Funcionário não encontrado </li>
+                <li> 400 - Erro do servidor </li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr />
+
+    <ul>
+        <li> <strong> GET - /api/funcionario/listar </strong> </li>
+        <li> Descrição: Listar todos os Funcionários </li>
+        <li> Tipo de dados: JSON </li>
+        <li>
+            Saída HTTP:
+            <ul>
+                <li> 200 - OK (Lista de objetos contendo os dados dos Funcionários) </li>
+                <li> 403 - Nenhum Funcionário encontrado </li>
+                <li> 400 - Erro do servidor </li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>
